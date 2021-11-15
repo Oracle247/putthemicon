@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+		<title>HTML</title>
+	
+	<!-- HTML -->
+	
+		
+	<!-- Custom Styles -->
+		<link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./contact.css">
+	</head>
+
+	<body>
+	<!-- Project -->
+    <nav class="navBar" id="header">
+      <div class="logo">				
+        <div class="logo-pic"></div>
+			</div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="">BO</a></li>
+      </ul>
+      <div class="toggle" onclick="toggle()">
+        <span class="tog1"></span>
+        <span class="tog2"></span>
+        <span class="tog3"></span>
+      </div>
+    </nav>		
+		<section>
+      <div class="content">
+        <div class="pic">
+          <!-- <img src="./melissa-askew-AUXanrckXn0-unsplash.jpg"> -->
+        </div>      
+        <div class="form-page">
+          <form class="form" action="/contact" method="POST">
+            <h1>Contact Us</h1>
+            <div class="row100">
+              <div class="col">
+                <div class="inputBox">
+                  <input type="text" name="fullName" required="true">
+                  <span class="text">Full Name</span>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>  
+            <div class="row100">
+              <div class="col">
+                <div class="inputBox">
+                  <input type="text" name="email" required="true">
+                  <span class="text">Email</span>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row100 tripple">
+              <div class="col">
+                <div class="inputBox">
+                  <input type="text" name="phone" required="true">
+                  <span class="text">Phone Number</span>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>  
+            <div class="row100">
+              <div class="col">
+                <div class="inputBox textarea">
+                  <textarea name="message" required="true"></textarea>
+                  <span class="text">Message</span>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div> 
+            <div class="row100">
+              <div class="col submit">
+                <input type="submit", value="send">
+              </div>
+            </div>  
+          </form>
+        </div>
+      </div>
+		</section>
+	</body>
+	<script src="main.js"></script>
+</html>
