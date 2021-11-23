@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+		<title>HTML</title>
+	
+	<!-- HTML -->
+	
+		
+	<!-- Custom Styles -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+    
+		<link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dashboard.css">
+	</head>
+
+	<body>
+	<!-- Project -->
+    <nav class="navBar" id="header">
+      <div class="logo">
+        <div class="logo-pic"></div>				
+			</div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="">BO</a></li>
+      </ul>
+      <div class="toggle" onclick="toggle()">
+        <span class="tog1"></span>
+        <span class="tog2"></span>
+        <span class="tog3"></span>
+      </div>
+    </nav>		
+		<section>
+      <div class="content">
+        <div class="table">
+          <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                  <th>Full Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Gender</th>
+                  <th>DOB</th>
+                  <th>Address</th>
+                  <th>State</th>
+                  <th>LGA</th>
+                  <th>City</th>
+                  <th>Hobby</th>
+                  <th>Genre</th>
+                  <th>About</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                   <th>Full Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Gender</th>
+                  <th>DOB</th>
+                  <th>Address</th>
+                  <th>State</th>
+                  <th>LGA</th>
+                  <th>City</th>
+                  <th>Hobby</th>
+                  <th>Genre</th>
+                  <th>About</th>
+                </tr>
+            </tfoot>
+        </table>
+        
+        </div>
+      </div>
+		</section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
+    
+    <script src="dashboard.js"></script>
+	</body>
+</html>
