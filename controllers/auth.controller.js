@@ -45,7 +45,7 @@ const signin = async(req, res) => {
         const token = createToken(admin._id);
         let refreshToken = createRefreshToken(admin._id);
 
-        res.redirect(`/dashboard/${admin._id}`);
+        res.redirect(`/dashboard`);
 
     } catch (err) {
         res.json({
