@@ -1,233 +1,232 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,300;1,400&display=swap');
-*, *::before, *::after{
-	box-sizing: border-box;
-	font-family: "lato", sans-serif;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: "lato", sans-serif;
     /* outline: 1px solid red; */
 }
 
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: 0;
-	font-family: 'Poppins', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-nav{
-  position: relative;
-}
-
-section{
-	width: 100%;
-	height: 92vh;
-}
-
-section .content{
-	position: relative;
-	height: 100%;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	background-color: white;  
-}
-
-section .content .pic{
-	position: relative;
-	width: 70%;
-	height: 100%;
-	background-image: url("./melissa-askew-AUXanrckXn0-unsplash.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	overflow: hidden;
-}
-
-section .content .pic::before{
-	content: "";
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	width: 20%;
-  height: 100%;
-  background: linear-gradient(to left,rgb(9, 5, 54), transparent);
-  z-index: 1000;
-}
-
-section .content .form-page{
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-  align-items: stretch;
-	padding: 30px;  
-	width: 100%;
-	height: 100%;
-	background-color: rgb(9, 5, 54);
-}
-
-section .content .form-page .form{
-	position: relative;
-	display: flex;
-	flex-direction: column;
-  gap: 0px;
-}
-
-section .content .form-page h1{
-	color: #ffcc74;
-	font-size: 60px;
-	margin-bottom: 20px;
-	text-transform: capitalize;
-}
-   
-section .content .form-page .form .row100{
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(autofit,minmax(300px,1fr));
-} 
-
-section .content .form-page .form .row100 .col{
-  position: relative;
-  width: 100%;
-  padding: 0 0px;
-  margin: 30px 0 10px;
-  transition: 0.5s;
-}
-
-section .content .form-page .form .row100 .inputBox{
-  position: relative;
-  width: 100%;
-  height: 40px;
-  color: #ffcc74; 	
-}
-
-section .content .form-page .form .row100 .inputBox input,
-section .content .form-page .form .row100 .inputBox.textarea textarea{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  box-shadow: none;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  padding: 0 10px;
-  z-index: 1;
-  color: rgb(9, 5, 54);
-}
-
-section .content .form-page .form .row100 .inputBox .text{
-  position: absolute;
-  top: 0;
-  left: 0;
-  line-height: 40px;
-  font-size: 18px;
-  padding: 0px 10px;
-  display: block;
-  transition: 0.5s;
-  pointer-events: none;
-  color: #d6c6aa; 
-}
-
-section .content .form-page .form .row100 .inputBox input:focus + .text,
-section .content .form-page .form .row100 .inputBox input:valid + .text{
-  top: -35px;
-  left: -10px;
-  color: #d6c6aa;
-}
-
-section .content .form-page .form .row100 .inputBox .line{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #d6c6aa;
-  transition: 0.5s;
-  border-radius: 2px;
-  pointer-events: none;
-}
-
-section .content .form-page .form .row100 .inputBox input:focus ~ .line,
-section .content .form-page .form .row100 .inputBox input:valid ~ .line{
-  color: #d6c6aa;
-  height: 100%;
-}
-
-section .content .form-page .form .row100 .inputBox.textarea{
-  position: relative;
-  width: 100%;
-  height: 100px;
-  padding: 10px 0;
-}
-
-section .content .form-page .form .row100 .inputBox.textarea textarea{
-  height: 100%;
-  resize: none;
-}
-
-section .content .form-page .form .row100 .inputBox textarea:focus + .text,
-section .content .form-page .form .row100 .inputBox textarea:valid + .text{
-  top: -35px;
-  left: -10px;
-  color: #d6c6aa;
-}
-
-section .content .form-page .form .row100 .inputBox textarea:focus ~ .line,
-section .content .form-page .form .row100 .inputBox textarea:valid ~ .line{
-  height: 100%;
-}
-
-
-
-section .content .form-page .form .row100 .submit input{
-  border: 2px solid white;
-  border-radius: 10px;
-  width: fit-content;
-  padding: 10px 30px;
-  background: #ffcc74;
-  color: rgb(9, 5, 54);
-  font-size: 18px;
-  z-index: 1;
-}
-
-@media only screen and (max-width: 746px){
-  section{
-    height: 150vh;
-  }
-  section .content{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;  
-  }
-  section .content .pic{
+nav {
     position: relative;
+}
+
+section {
     width: 100%;
-    height: 30%;
+    height: 92vh;
+}
+
+section .content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+}
+
+section .content .pic {
+    position: relative;
+    width: 70%;
+    height: 100%;
     background-image: url("./melissa-askew-AUXanrckXn0-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-  }
-  
-  section .content .pic::before{
-		content: "";
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-	  height: 20%;
-	  background: linear-gradient(to top,rgb(9, 5, 54), transparent);
-	  z-index: 50;
-	}
-  section .content .form-page h1{
+}
+
+section .content .pic::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(to left, rgb(9, 5, 54), transparent);
+    z-index: 1000;
+}
+
+section .content .form-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(9, 5, 54);
+}
+
+section .content .form-page .form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+section .content .form-page h1 {
     color: #ffcc74;
-    font-size: 40px;
+    font-size: 60px;
     margin-bottom: 20px;
     text-transform: capitalize;
-  }
-  section .content .form-page .form .row100 .inputBox .text{
-    line-height: 20px;
-    font-size: 13px;
-    padding: 0px 6px;
-  }
+}
+
+section .content .form-page .form .row100 {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(300px, 1fr));
+}
+
+section .content .form-page .form .row100 .col {
+    position: relative;
+    width: 100%;
+    padding: 0 0px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+
+section .content .form-page .form .row100 .inputBox {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #ffcc74;
+}
+
+section .content .form-page .form .row100 .inputBox input,
+section .content .form-page .form .row100 .inputBox.textarea textarea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: rgb(9, 5, 54);
+}
+
+section .content .form-page .form .row100 .inputBox .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0px 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+    color: #d6c6aa;
+}
+
+section .content .form-page .form .row100 .inputBox input:focus+.text,
+section .content .form-page .form .row100 .inputBox input:valid+.text {
+    top: -35px;
+    left: -10px;
+    color: #d6c6aa;
+}
+
+section .content .form-page .form .row100 .inputBox .line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #d6c6aa;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+section .content .form-page .form .row100 .inputBox input:focus~.line,
+section .content .form-page .form .row100 .inputBox input:valid~.line {
+    color: #d6c6aa;
+    height: 100%;
+}
+
+section .content .form-page .form .row100 .inputBox.textarea {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+section .content .form-page .form .row100 .inputBox.textarea textarea {
+    height: 100%;
+    resize: none;
+}
+
+section .content .form-page .form .row100 .inputBox textarea:focus+.text,
+section .content .form-page .form .row100 .inputBox textarea:valid+.text {
+    top: -35px;
+    left: -10px;
+    color: #d6c6aa;
+}
+
+section .content .form-page .form .row100 .inputBox textarea:focus~.line,
+section .content .form-page .form .row100 .inputBox textarea:valid~.line {
+    height: 100%;
+}
+
+section .content .form-page .form .row100 .submit input {
+    border: 2px solid white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px 30px;
+    background: #ffcc74;
+    color: rgb(9, 5, 54);
+    font-size: 18px;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 746px) {
+    section {
+        height: 150vh;
+    }
+    section .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+    section .content .pic {
+        position: relative;
+        width: 100%;
+        height: 30%;
+        background-image: url("./melissa-askew-AUXanrckXn0-unsplash.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+    section .content .pic::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 20%;
+        background: linear-gradient(to top, rgb(9, 5, 54), transparent);
+        z-index: 50;
+    }
+    section .content .form-page h1 {
+        color: #ffcc74;
+        font-size: 40px;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+    }
+    section .content .form-page .form .row100 .inputBox .text {
+        line-height: 20px;
+        font-size: 13px;
+        padding: 0px 6px;
+    }
 }
