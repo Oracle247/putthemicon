@@ -502,13 +502,18 @@ nav ul li a:hover {
     .intro p {
         font-size: 14px;
     }
+    .intro .container {
+        gap: 15px;
+        padding: 5px;
+    }
+    .intro .container h2 {
+        font-size: 15px;
+    }
+    .intro .container small {
+        font-size: 15px;
+    }
     .intro .register {
-        border: 1px solid #ffcc74;
-        border-radius: 10px;
-        width: fit-content;
         padding: 8px 25px;
-        color: #ffcc74;
-        z-index: 1;
     }
     .registration-page {
         padding: 50px;
