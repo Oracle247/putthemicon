@@ -4,8 +4,8 @@ $(document).ready(function() {
         "ajax": "/userDetails",
         rowReorder: true,
         "lengthMenu": [
-            [2, 5, 10, -1],
-            [2, 5, 10, "All"]
+            [5, 10, 15, -1],
+            [5, 10, 15, "All"]
         ],
         "columns": [
             { 'data': 'fullName' },

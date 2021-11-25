@@ -22,14 +22,15 @@ const signin = async(req, res) => {
     //check email confirmation status 
     //...............................
     try {
+        console.log(req.body.username + " : " + req.body.password)
         const admin = await Admin.findOne({ username: req.body.username });
         if (!admin) {
-            return res.status(404).json({
+            return res.json({
                 nouser: "Admin Not found."
             });
         }
 
-        console.log(admin.password + " : " + req.body.password)
+
         var passwordIsValid = bcrypt.compareSync(
             req.body.password,
             admin.password
@@ -44,8 +45,16 @@ const signin = async(req, res) => {
 
         const token = createToken(admin._id);
         let refreshToken = createRefreshToken(admin._id);
-
-        res.redirect(`/dashboard/${admin._id}`);
+        res.setHeader("x-access-token", token);
+        res.json({
+                error: null,
+                message: "success",
+                redirect: true,
+                redirectUrl: '/dashboard',
+                token,
+                refreshToken
+            })
+            // res.redirect(`/dashboard`);
 
     } catch (err) {
         res.json({

@@ -1,165 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
-    <title>HTML</title>
-	
-	<!-- HTML -->
-	
-		
-	<!-- Custom Styles -->
-		<link rel="stylesheet" href="./style.css">
-	</head>
+    <title>
+        Putthemicon
+    </title>
 
-	<body>
-	<!-- Project -->
-		<nav class="navBar" id="header">
-			<div class="logo">	
-        <div class="logo-pic"></div>			
-			</div>
-			<ul>
-				<li><a href="./">Home</a></li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/contact">Contact</a></li>
-        <li><a href="signin">BO</a></li>
-			</ul>
-			<div class="toggle" onclick="toggle()">
-				<span class="tog1"></span>
-				<span class="tog2"></span>
-				<span class="tog3"></span>
-			</div>
-		</nav>		
+    <!-- add icon link -->
+    <link rel="icon" href="./imgbin_microphone-award-trophy-singing-music-png.png" type="image/x-icon">
+
+
+    <!-- HTML -->
+
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Project -->
+    <nav class="navBar" id="header">
+        <div class="logo">
+            <div class="logo-pic"></div>
+        </div>
+        <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="signin">BO</a></li>
+        </ul>
+        <div class="toggle" onclick="toggle()">
+            <span class="tog1"></span>
+            <span class="tog2"></span>
+            <span class="tog3"></span>
+        </div>
+    </nav>
     <section class="intro">
-      <img src="./melissa-askew-AUXanrckXn0-unsplash.jpg" id="pic">
-      <div class="pic" id="logo par"></div>
-      <h1 id="par"><span>PUT THE MIC ON</span><br> Auditions</h1>
-      <p id="par">countdown to event:</p>
-      <div class="register" id="par">Register</div>
+        <img src="./melissa-askew-AUXanrckXn0-unsplash.jpg" id="pic">
+        <div class="pic" id="logo par"></div>
+        <h1 id="par"><span>PUT THE MIC ON</span><br> Auditions</h1>
+        <p id="par">countdown to event:</p>
+        <div class="container" id="countdown">
+            <div class="time">
+                <h2 id="days"></h2>
+                <small>Days</small>
+            </div>
+            <div class="time">
+                <h2 id="hours"></h2>
+                <small>Hours</small>
+            </div>
+            <div class="time">
+                <h2 id="minutes"></h2>
+                <small>Minutes</small>
+            </div>
+            <div class="time">
+                <h2 id="second"></h2>
+                <small>Second</small>
+            </div>
+        </div>
+
+        <div class="register" id="par">Register</div>
     </section>
     <section class="registration-page">
-      <form class="form" action="/submit" method="POST">
-        <div class="head">
-          <p>FILL THE FORM REQUIRED TO BE PART OF THE</p>
-          <p id="audt">AUDITIONS</p>
-        </div>
-        <div class="row100">
-          <div class="col">
-            <div class="inputBox">
-              <input type="text" name="fullName" required="true">
-              <span class="text">Full Name</span>
-              <span class="line"></span>
+        <form class="form" action="/submit" method="POST">
+            <div class="head">
+                <p>FILL THE FORM REQUIRED TO BE PART OF THE</p>
+                <p id="audt">AUDITIONS</p>
             </div>
-          </div>
-        </div>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="fullName" required="true">
+                        <span class="text">Full Name</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
 
-        <div class="row100">
-          <div class="col">
-            <div class="inputBox">
-              <input type="email" name="email" required="true">
-              <span class="text">Email</span>
-              <span class="line"></span>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="email" name="email" required="true">
+                        <span class="text">Email</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="row100 tripple">
-          <div class="col">
-            <div class="inputBox">
-              <input type="tel" name="phone" required="true">
-              <span class="text">Phone</span>
-              <span class="line"></span>
+            <div class="row100 tripple">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="tel" name="phone" required="true">
+                        <span class="text">Phone</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="gender" name="gender" required="true">
+                        <span class="text">Gender</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="date" name="dateOfBirth" required="true">
+                        <span class="text">Date Of Birth</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="inputBox">
-              <input type="gender" name="gender" required="true">
-              <span class="text">Gender</span>
-              <span class="line"></span>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox textarea">
+                        <input type="text" name="address" required="true">
+                        <span class="text">Address</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="inputBox">
-              <input type="date" name="dateOfBirth" required="true">
-              <span class="text">Date Of Birth</span>
-              <span class="line"></span>
+            <div class="row100 tripple">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="state" required="true">
+                        <span class="text">State</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="lga" required="true">
+                        <span class="text">LGA</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="city" required="true">
+                        <span class="text">City/Town</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="row100">
-          <div class="col">
-            <div class="inputBox textarea">
-              <input type="text" name="address" required="true">
-              <span class="text">Address</span>
-              <span class="line"></span>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox textarea">
+                        <textarea name="hobby" required="true"></textarea>
+                        <span class="text">Hobby</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="row100 tripple">
-          <div class="col">
-            <div class="inputBox">
-              <input type="text" name="state" required="true">
-              <span class="text">State</span>
-              <span class="line"></span>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="genre" required="true">
+                        <span class="text">Genre</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="inputBox">
-              <input type="text" name="lga" required="true">
-              <span class="text">LGA</span>
-              <span class="line"></span>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox textarea">
+                        <textarea name="about" required="true"></textarea>
+                        <span class="text">About</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="inputBox">
-              <input type="text" name="city" required="true">
-              <span class="text">City/Town</span>
-              <span class="line"></span>
+            <div class="row100">
+                <div class="col submit">
+                    <input type="submit" , value="SUBMIT">
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="row100">
-          <div class="col">
-            <div class="inputBox textarea">
-              <textarea name="hobby" required="true"></textarea>
-              <span class="text">Hobby</span>
-              <span class="line"></span>
-            </div>
-          </div>
-        </div>
-        <div class="row100">
-          <div class="col">
-            <div class="inputBox">
-              <input type="text" name="genre" required="true">
-              <span class="text">Genre</span>
-              <span class="line"></span>
-            </div>
-          </div>
-        </div> 
-        <div class="row100">
-          <div class="col">
-            <div class="inputBox textarea">
-              <textarea name="about" required="true"></textarea>
-              <span class="text">About</span>
-              <span class="line"></span>
-            </div>
-          </div>
-        </div> 
-        <div class="row100">
-          <div class="col submit">
-            <input type="submit", value="SUBMIT">
-          </div>
-        </div>  
-      </form>
+        </form>
     </section>
-	</body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
-	<script src="main.js"></script>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+
 </html>

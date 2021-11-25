@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
 
 const dotenv = require('dotenv');
 const bodyParser = require("body-parser");
@@ -20,9 +21,16 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     })
     .catch((err) => console.log(err))
 
+app.use(cors({
+    origin: '*'
+}));
 app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('client'))
+
+// app.options('*', cors());
+
 
 const {
     register,
@@ -39,6 +47,13 @@ const {
 
 const verifyToken = require("./middlewares/authJwt.js");
 
+// app.use(function(req, res, next) {
+//     res.header(
+//         "Access-Control-Allow-Headers",
+//         "x-access-token, Origin, Content-Type, Accept"
+//     );
+//     next();
+// });
 
 app.get('/', (req, res) => {
     res.sendFile('./client/main.html', { root: __dirname })
@@ -58,9 +73,11 @@ app.post('/contact', contact)
 
 //admin login
 app.get('/signin', (req, res) => {
+
     res.sendFile('./client/bo.html', { root: __dirname })
 })
-app.get('/dashboard/:id', (req, res) => {
+app.get('/dashboard', (req, res) => {
+
     res.sendFile('./client/dashboard.html', { root: __dirname })
 })
 
