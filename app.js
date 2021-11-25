@@ -77,7 +77,6 @@ app.get('/signin', (req, res) => {
     res.sendFile('./client/bo.html', { root: __dirname })
 })
 app.get('/dashboard', (req, res) => {
-
     res.sendFile('./client/dashboard.html', { root: __dirname })
 })
 
